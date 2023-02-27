@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title> Homepage </title>
+{% endblock %}
+
+{% block content %}
+<!-- <h1 style="text-align: center; color: rgb(33, 122, 255);">Mortgage<span style="color: rgb(255, 0, 234);">Kart</span></h1> -->
+{% if user %}
+<div class="container-fluid">
+    {% if msg %}
+      <div class="alert alert-success col-sm-7" role="alert" style="margin-left: 250px;">
+          {{ msg }}
+      </div>
+    {% endif %}
+    {% if error %}
+      <div class="alert alert-danger col-sm-7" role="alert" style="margin-left: 250px;">
+          {{ error }}
+      </div>
+    {% endif %}
+    <br>
+    <h2>Hello {{user.name}}</h2>
+    <br>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/4862/4862713.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Personal Information</h5>
+            <p class="card-text">Complete your personal and contact information.</p>
+            {% if user.address %}
+                <a href="#" class="btn btn-secondary">Completed!</a>
+                <!-- <a href="/userInfo" class="btn btn-info">Edit</a> -->
+            {% else %}
+                <a href="/userInfo" class="btn btn-primary">Complete-></a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

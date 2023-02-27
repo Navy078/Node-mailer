@@ -1,0 +1,83 @@
+{% block title %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="container">
+  <h3 style="text-align: center;margin-top: 30px; margin-bottom: 30px; background-color: rgb(168, 216, 255);">Personal Information</h3>
+  <table class="table" style="text-align: center;">
+    <thead>
+      <tbody>
+        <tr>
+          <th scope="row">Name</th>
+          <td>{{ user.name }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Email</th>
+          <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Address</th>
+          <td>{{ user.address }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Country</th>
+          <td>{{ user.country }}</td>
+        </tr>
+        <tr>
+          <th scope="row">State</th>
+          <td>{{ user.state }}</td>
+        </tr>
+        <tr>
+          <th scope="row">City</th>
+          <td>{{ user.city }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Zipcode</th>
+          <td>{{ user.zipcode }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Mobile number</th>
+          <td>{{ user.mobile }}</td>
+        </tr>
+      </tbody>
+    </thead>
+  </table>
+{% endblock %}
+
+<!-- <div class="container-fluid">
+    <h3 style="text-align: center;margin-top: 30px; margin-bottom: 30px; background-color: rgb(168, 216, 255);">Personal Information</h3>
+      <form action="/userInfo" method="post" autocomplete="off">
+        <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+          <label class="col-sm-2" for="name" required class="form-label"><b>Name</b></label>
+          <input class="col-sm-6" type="text" required class="form-control" name="name" value="{{user.name}}" readonly>
+        </div>
+        <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+          <label class="col-sm-2" for="email" required class="form-label"><b>Email address</b></label>
+          <input class="col-sm-6" type="text" required class="form-control" name="email" value="{{user.email}}" readonly>
+        </div>
+        <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+          <label class="col-sm-2" for="address" required class="form-label"><b>Current address</b></label>
+          <input class="col-sm-6" type="text" required class="form-control" name="address" value="{{user.address}}" readonly>
+        </div>
+        <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+          <label class="col-sm-2" for="country" required class="form-label"><b>Country</b></label>
+          <input class="col-sm-6" type="text" required class="form-control" name="country" value="{{user.country}}" readonly>
+        </div>
+        <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+          <label class="col-sm-2" for="state" required class="form-label"><b>State</b></label>
+          <input class="col-sm-6" type="text" required class="form-control" name="state" value="{{user.state}}" readonly>
+        </div>
+        <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+          <label class="col-sm-2" for="city" required class="form-label"><b>City</b></label>
+          <input class="col-sm-6" type="text" required class="form-control" name="city" value="{{user.city}}" readonly>
+        </div>
+        <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+          <label class="col-sm-2" for="zip" required class="form-label"><b>Zip code</b></label>
+          <input class="col-sm-6" type="number" required class="form-control" name="zipcode" value="{{user.zipcode}}" readonly>
+        </div>
+        <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+          <label class="col-sm-2" for="mobile" required class="form-label"><b>Mobile number</b></label>
+          <input class="col-sm-6" type="number" required class="form-control" name="mobile" value="{{user.mobile}}" readonly>
+        </div>
+      </form>
+  </div> -->

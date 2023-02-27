@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #d6ebf3;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      {% include "static/trace (1).svg" %}
+      <!-- <img src="../static/mailingLogo.png" alt="logo"> -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h1 style="text-align: center; color: rgb(33, 122, 255); margin-left: 670px;">Mortgage<span style="color: rgb(255, 0, 234);">Kart</span></h1>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 570px;">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+          <ul class="dropdown-menu" area-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/register">Register</a></li>
+            <li><a class="dropdown-item" href="/login">Login</a></li>
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          </ul>
+        </li>
+        {% if user %}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

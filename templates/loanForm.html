@@ -1,0 +1,40 @@
+{% block content %}
+<div class="container-fluid">
+  <h3 style="text-align: center;margin-top: 30px; margin-bottom: 30px; background-color: rgb(168, 216, 255);">Personal Information</h3>
+    <form action="/userInfo" method="post" autocomplete="off">
+      <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+        <label class="col-sm-2" for="name" required class="form-label"><b>Name</b></label>
+        <input class="col-sm-6" type="text" required class="form-control" name="name" value="{{user.name}}" readonly>
+      </div>
+      <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+        <label class="col-sm-2" for="email" required class="form-label"><b>Email address</b></label>
+        <input class="col-sm-6" type="text" required class="form-control" name="email" value="{{user.email}}" readonly>
+      </div>
+      <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+        <label class="col-sm-2" for="address" required class="form-label"><b>Current address</b></label>
+        <input class="col-sm-6" type="text" required class="form-control" name="address" placeholder="Enter current address">
+      </div>
+      <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+        <label class="col-sm-2" for="country" required class="form-label"><b>Country</b></label>
+        <input class="col-sm-6" type="text" required class="form-control" name="country" placeholder="Enter country">
+      </div>
+      <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+        <label class="col-sm-2" for="state" required class="form-label"><b>State</b></label>
+        <input class="col-sm-6" type="text" required class="form-control" name="state" placeholder="Enter state">
+      </div>
+      <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+        <label class="col-sm-2" for="city" required class="form-label"><b>City</b></label>
+        <input class="col-sm-6" type="text" required class="form-control" name="city" placeholder="Enter city">
+      </div>
+      <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+        <label class="col-sm-2" for="zip" required class="form-label"><b>Zip code</b></label>
+        <input class="col-sm-6" type="number" required class="form-control" name="zipcode" placeholder="Enter zip code">
+      </div>
+      <div class="mb-3" style="margin-top: 20px; margin-left: 250px;">
+        <label class="col-sm-2" for="mobile" required class="form-label"><b>Mobile number</b></label>
+        <input class="col-sm-6" type="number" required class="form-control" name="mobile" placeholder="Enter mobile number">
+      </div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 20px; margin-left: 600px;">Submit!</button>
+    </form>
+</div>
+{% endblock %}
